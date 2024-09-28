@@ -1,0 +1,36 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  background: url(https://wallpaperaccess.com/full/724849.jpg);
+  background-size: cover;
+  background-position: center;
+  }
+  
+  .card {
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background:transparent;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .btn-google {
+    background-color: #db4437;
+    color: #fff;
+  }
+  
+  .btn-facebook {
+    background-color: #3b5998;
+    color: #fff;
+  }
+  
+  .social-login button i {
+    margin-right: 8px;
+  }
+  h3,p,label{
+    color:white;
+  }

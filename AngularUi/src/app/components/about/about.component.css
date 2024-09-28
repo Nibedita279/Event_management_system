@@ -1,0 +1,114 @@
+.about-page {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hero-section {
+    background: #4a90e2;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+  }
+  
+  .features-section {
+    background: #f7f7f7;
+    padding: 60px 0;
+  }
+  
+  .features-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .features-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+  }
+  
+  .feature-card i {
+    font-size: 36px;
+    color: #4a90e2;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section {
+    background: #fff;
+    padding: 60px 0;
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .team-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .team-card {
+    text-align: center;
+  }
+  
+  .team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+
+  .dashboard-container {
+    height: 100vh; /* Full height of the viewport */
+    
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .row {
+    height: calc(100vh - 80px); /* Adjust height based on header height */
+  }
+  
+  app-sidebar {
+    width: 250px; /* Fixed width for sidebar */
+  }
+  
+  .main-content {
+    padding: 20px; /* Padding around main content */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    
+  }

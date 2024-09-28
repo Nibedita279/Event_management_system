@@ -1,0 +1,48 @@
+<div class="container-fluid dashboard-container">
+  <app-header></app-header>
+
+  <div class="row">
+    <app-sidebar></app-sidebar>
+    <div class="col main-content">
+      <div class="content">
+        <div class="justify-content-center">
+          <div class="col-md-8">
+            <div class="input-group">
+              <mat-form-field appearance="fill" class="me-3">
+                <mat-label>Select Filter</mat-label>
+                <mat-select [(ngModel)]="selectedFilter">
+                  <mat-option value="title">Title</mat-option>
+                  <mat-option value="location">Location</mat-option>
+                  <mat-option value="date">Date</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <!-- Search bar -->
+              <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search events...">
+              
+              <!-- Search button -->
+              <button class="btn btn-primary" type="button" (click)="applySearch()">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <br>
+        <!-- Main dashboard content goes here -->
+        <h1 >Welcome to the Event Management Dashboard</h1>
+        <h2>Manage events, participants, and more...</h2>
+        <div *ngIf="filteredEvents.length === 0">No events available.</div>
+        <div *ngFor="let event of filteredEvents" class="event-card">
+          <h3>{{ event.title }}</h3>
+          <p>{{ event.date | date: 'longDate' }}</p>
+          <p class="event-status"><strong>Status:</strong> {{ getEventStatus(event.date) }}</p>
+          <button (click)="viewEventDetails(event.id)" class="btn btn-primary">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

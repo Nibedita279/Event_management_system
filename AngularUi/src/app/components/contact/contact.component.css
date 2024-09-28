@@ -1,0 +1,130 @@
+.contact-us-page {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .contact-hero {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .contact-hero h1 {
+    font-size: 36px;
+  }
+  
+  .contact-hero p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .contact-form-section {
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .form-container {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 40px;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-btn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #357ab8;
+  }
+  
+  .contact-details {
+    flex: 1;
+    min-width: 300px;
+    margin-left: 40px;
+  }
+  
+  .contact-details h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-details p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .contact-details i {
+    margin-right: 10px;
+    color: #4a90e2;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    color: #357ab8;
+  }
+  
+
+  .dashboard-container {
+    height: 100vh; /* Full height of the viewport */
+    
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .row {
+    height: calc(100vh - 80px); /* Adjust height based on header height */
+  }
+  
+  app-sidebar {
+    width: 250px; /* Fixed width for sidebar */
+  }
+  
+  .main-content {
+    padding: 20px; /* Padding around main content */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    
+  }

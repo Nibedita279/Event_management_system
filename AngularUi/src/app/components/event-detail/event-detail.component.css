@@ -1,0 +1,56 @@
+/* src/app/components/event-details/event-details.component.css */
+.container {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.event-meta {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.event-description {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.event-description h4 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.dashboard-container {
+  height: 100vh; /* Full height of the viewport */
+  
+  background-size: cover;
+  background-position: center;
+}
+
+.row {
+  height: calc(100vh - 80px); /* Adjust height based on header height */
+}
+
+app-sidebar {
+  width: 250px; /* Fixed width for sidebar */
+}
+
+.main-content {
+  padding: 20px; /* Padding around main content */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+.event-details{
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly translucent background for content area */
+    border-radius: 8px; /* Rounded corners for content area */
+    padding: 20px; /* Padding inside content area */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}

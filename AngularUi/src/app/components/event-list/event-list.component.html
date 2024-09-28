@@ -1,0 +1,63 @@
+<div class="container-fluid dashboard-container">
+    <app-header></app-header>
+  
+    <div class="row">
+      <app-sidebar></app-sidebar>
+      <div class="col main-content">
+ <!-- src/app/components/event-list/event-list.component.html -->
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Manage Events</h2>
+    
+    <div class="row">
+      <div *ngFor="let event of events" class="col-md-4 mb-4">
+        <div class="card shadow-sm event-card">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.title }}</h5>
+            <p class="card-text">
+              <strong>Date:</strong> {{ event.date | date: 'longDate' }} <br>
+              <strong>Location:</strong> {{ event.location }} <br>
+              <strong>Status:</strong> <span [ngClass]="getEventStatusClass(event.date)">{{ getEventStatus(event.date) }}</span>
+            </p>
+            <!-- <p class="card-description">{{ event.description | slice: 0:100 }}...</p> -->
+            
+            <div class="d-flex justify-content-between mt-3">
+              <button class="btn btn-primary" (click)="viewEvent(event.id)">
+                <i class="bi bi-eye"></i> View
+              </button>
+              <button class="btn btn-warning" (click)="editEvent(event.id)">
+                <i class="bi bi-pencil-square"></i> Edit
+              </button>
+              <button class="btn btn-danger" (click)="deleteEvent(event.id)">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+              <!-- <button (click)="selectEvent(event.id)">View Attendees</button>
+
+ 
+  <div *ngIf="selectedEventId === event.id && attendees.length > 0">
+    <h4>Attendees for {{ event.title }}:</h4>
+    <ul>
+      <li *ngFor="let attendee of attendees">
+        {{ attendee.user.username }} - Ticket Type: {{ attendee.ticket_type }}
+      </li>
+    </ul>
+  </div>
+
+  
+  <div *ngIf="selectedEventId === event.id && attendees.length === 0">
+    <p>No attendees yet.</p>
+  </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+      </div>
+    </div>
+  
+    <app-footer></app-footer>
+  </div>
+  

@@ -1,0 +1,26 @@
+.sidebar {
+    background-color: #f8f9fa; /* Light background color for sidebar */
+    padding: 20px; /* Padding inside sidebar */
+    height: 100%; /* Full height */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  }
+  
+  .sidebar h2 {
+    font-size: 24px; /* Header font size */
+  }
+  
+  .sidebar ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0; /* Space between items */
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-size: 18px; /* Font size for links */
+  }
+  

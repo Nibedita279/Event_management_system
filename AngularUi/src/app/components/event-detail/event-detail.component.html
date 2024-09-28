@@ -1,0 +1,43 @@
+<!-- src/app/components/event-details/event-details.component.html -->
+<div class="container-fluid dashboard-container">
+  <app-header></app-header>
+
+  <div class="row">
+    <app-sidebar></app-sidebar>
+    <div class="col main-content">
+<div class=" event-details">
+  <h2>{{ event?.title }}</h2>
+
+  <div class="event-meta">
+    <p><strong>Date:</strong> {{ event?.date | date: 'longDate' }}</p>
+    <p><strong>Time:</strong> {{ event?.time }}</p>
+    <p><strong>Location:</strong> {{ event?.location }}</p>
+    <p><strong>Ticket Price:</strong> ${{ event?.ticket_price }}</p>
+    <p><strong>Privacy:</strong> {{ event?.privacy ? 'Private' : 'Public' }}</p>
+    <p><strong>Status:</strong> {{ getEventStatus(event?.date) }}</p>
+  </div>
+
+  <div class="event-description">
+    <h4>Description</h4>
+    <p>{{ event?.description }}</p>
+  </div>
+  <button class="btn btn-success" (click)="selectEvent(event.id)">Buy Ticket</button>
+  <!-- <button class="btn btn-success" *ngIf="event?.ticket_price > 0" (click)="buyTicket(event?.id)">Buy Ticket</button> -->
+  
+</div>
+<!-- Attendee Creation -->
+<div *ngIf="selectedEventId">
+  <h4>Buy Ticket for Event ID: {{ selectedEventId }}</h4>
+  <label for="ticket_type">Ticket Type:</label>
+  <select id="ticket_type" [(ngModel)]="attendeeData.ticket_type">
+    <option value="VIP">VIP</option>
+    <option value="VVIP">VVIP</option>
+    <option value="Regular">Regular</option>
+  </select>
+  <button (click)="createAttendee()">Submit</button>
+</div>
+</div>
+</div>
+
+<app-footer></app-footer>
+</div>

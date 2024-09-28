@@ -1,0 +1,56 @@
+<div class="container-fluid dashboard-container">
+  <app-header></app-header>
+
+  <div class="row">
+    <app-sidebar></app-sidebar>
+    <div class="col main-content">
+<div class="event-container">
+    <h2 class="event-title">Create a New Event</h2>
+    <form (ngSubmit)="onSubmit()" #eventForm="ngForm" class="event-form">
+      <div class="form-group">
+        <label for="eventTitle">Event Title</label>
+        <input type="text" id="eventTitle" name="eventTitle" required [(ngModel)]="eventData.title" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="eventDescription">Description</label>
+        <textarea id="eventDescription" name="eventDescription" rows="4" required [(ngModel)]="eventData.description" class="form-control"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="eventDate">Event Date</label>
+        <input type="date" id="eventDate" name="eventDate" required [(ngModel)]="eventData.date" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="eventTime">Event Time</label>
+        <input type="time" id="eventTime" name="eventTime" required [(ngModel)]="eventData.time" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="eventLocation">Location</label>
+        <input type="text" id="eventLocation" name="eventLocation" required [(ngModel)]="eventData.location" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="ticketPrice">Ticket Price ($)</label>
+        <input type="number" id="ticketPrice" name="ticketPrice" required [(ngModel)]="eventData.ticket_price" class="form-control" step="0.01" />
+      </div>
+  
+      <div class="form-group">
+        <label for="privacy">Privacy</label>
+        <select id="privacy" name="privacy" required [(ngModel)]="eventData.privacy" class="form-control">
+          <option [ngValue]="false">Public</option>
+          <option [ngValue]="true">Private</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Create Event</button>
+    </form>
+  </div>
+</div>
+</div>
+
+<app-footer></app-footer>
+</div>
+  

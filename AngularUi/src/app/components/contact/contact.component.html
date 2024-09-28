@@ -1,0 +1,61 @@
+<div class="container-fluid dashboard-container">
+    <app-header></app-header>
+  
+    <div class="row">
+      <app-sidebar></app-sidebar>
+      <div class="col main-content">
+<div class="contact-us-page">
+    <!-- Hero Section -->
+    <div class="contact-hero">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you! Fill out the form below or reach out to us through any of the following ways.</p>
+    </div>
+  
+    <!-- Contact Form Section -->
+    <div class="contact-form-section">
+      <div class="container">
+        <div class="form-container">
+          <h2>Get in Touch</h2>
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" required [(ngModel)]="contact.name" name="name" />
+            </div>
+  
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required [(ngModel)]="contact.email" name="email" />
+            </div>
+  
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required [(ngModel)]="contact.message" name="message"></textarea>
+            </div>
+  
+            <button type="submit" class="submit-btn" [disabled]="!contactForm.form.valid">Send Message</button>
+          </form>
+        </div>
+  
+        <!-- Contact Details Section -->
+        <div class="contact-details">
+          <h2>Contact Information</h2>
+          <p><i class="fas fa-map-marker-alt"></i> Hyscaler, Bhubaneswar, India</p>
+          <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> {{support}}</p>
+  
+          <!-- Social Media Links -->
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<app-footer></app-footer>
+</div>
+  
